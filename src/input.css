@@ -1,0 +1,48 @@
+@import url('fonts.googleapis.com');
+@import "tailwindcss";
+
+
+
+@theme {
+  --font-sans: "Roboto", sans-serif;
+  --font-kanit: "Kanit", sans-serif;
+}
+
+@theme {
+  --color-primary-50:  #FDFDFF;
+  --color-primary-100: #F8F8FF;
+  --color-primary-200: #F0F1FE;
+  --color-primary-300: #E6E7FF;
+  --color-primary-400: #DADCFF;
+  --color-primary-500: #CBCDFF;
+  --color-primary-600: #B8BAF8;
+  --color-primary-700: #9B9EF0;
+  --color-primary-800: #5B5BD6;
+  --color-primary-900: #5B5BD6;
+  --color-primary-1000: #5B5BD6;
+  --color-primary-1100: #272962;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.navbar-fixed {
+  @apply fixed z-9999 bg-white/70 backdrop-blur-[5px] shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.2)];
+}
+
+.hamburger-line {
+  @apply bg-gray-950 w-7.5 h-0.5 block my-2;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
