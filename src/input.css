@@ -8,6 +8,7 @@
   --font-kanit: "Kanit", sans-serif;
 }
 
+
 @theme {
   --color-primary-50:  #FDFDFF;
   --color-primary-100: #F8F8FF;
@@ -23,9 +24,7 @@
   --color-primary-1100: #272962;
 }
 
-body {
-  font-family: var(--font-sans);
-}
+
 
 .navbar-fixed {
   @apply fixed z-9999 bg-white/70 backdrop-blur-[5px] shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.2)];
