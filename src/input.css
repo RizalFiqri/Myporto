@@ -27,11 +27,11 @@
 
 
 .navbar-fixed {
-  @apply fixed z-9999 bg-white/70 backdrop-blur-[5px] shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.2)];
+  @apply fixed z-9999 bg-white/70 backdrop-blur-[5px] shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.2)] dark:bg-primary-1100/70;
 }
 
 .hamburger-line {
-  @apply bg-gray-950 w-7.5 h-0.5 block my-2;
+  @apply bg-gray-950 dark:bg-gray-100 w-7.5 h-0.5 block my-2;
 }
 
 .hamburger-active > span:nth-child(1) {
@@ -44,4 +44,16 @@
 
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
+}
+
+#DarkToggle:checked ~ label div.toggle-circle {
+  @apply translate-x-4;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  * {
+    @apply transition-all duration-700 ease-in-out;
+  }
 }
